@@ -1,0 +1,166 @@
+.nav {
+    background-color: #FFFFFF;
+}
+
+.nav.sticky + .home {
+    margin-top: 100px;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    border-bottom: 1px solid #7d6d95;
+    background-color: #FFFFFF;
+    padding: 23px 80px;
+}
+
+.logo-icon-link {
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+.logo-icon-link span {
+    padding-left: 25px;
+}
+
+.logo-icon {
+    width: 40px;
+}
+
+.nav a {
+    font-size: 17px;
+}
+
+.nav a:hover {
+    text-decoration: none;
+}
+
+.links {
+    text-align: right;
+}
+
+.links a {
+    padding: 0 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000000;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+    text-align: center;
+}
+
+.nav a.active {
+    color: #DA3F7E;
+}
+
+.header-purchase-button {
+    padding: 15px;
+    font-size: 18px;
+}
+
+.nav .purchase-link {
+    padding-right: 0px;
+}
+
+.menu-logo {
+    font-size: 20px;
+    color: #7c6d95;
+    padding: 10px 20px;
+}
+
+.small-purchase-button {
+    width: 100%;
+    padding: 12px;
+}
+
+.menu-side {
+    max-width: 430px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 3;
+}
+
+.menu-side .items {
+    display: block;
+}
+
+.links .items {
+    display: inline-block;
+}
+
+.menu-side a {
+    width: 100%;
+    display: block;
+    border-bottom: 1px solid #ECECEC;
+    padding: 15px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu-close {
+    font-size: 30px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ECECEC;
+    width: 100%;
+}
+
+.menu-overlay {
+    background-color: #000000;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+@media (max-device-width: 1200px) {
+    .nav .links a {
+        padding: 0 10px;
+    }
+
+    .logo-icon-link span {
+        padding: 10px;
+    }
+
+    .logo-icon {
+        width: 28px;
+    }
+
+    .header-purchase-button {
+        font-size: 17px;
+    }
+}
+
+@media (max-device-width: 1023px) {
+    header.sticky {
+        padding: 0;
+    }
+
+    .nav.sticky + .home {
+        margin-top: 80px;
+    }
+}
+
+@media (max-device-width: 1140px) {
+    .nav a {
+        font-size: 14px;
+    }
+
+    .nav list a {
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,174 @@
+.agenda {
+    padding: 60px 0 96px;
+}
+
+.agenda-title-section {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.item-container {
+    width: 20em;
+    border-left: solid 1px #ececec;
+}
+
+.item-container.talk {
+    width: 38em;
+}
+
+.item-container.informative {
+    width: 27em;
+}
+
+.talk-date-container {
+    width: 10em;
+    text-align: center;
+    padding: 7px 30px;
+    color: white;
+    margin: 0;
+}
+
+.register-background {
+    background-color: #50e3c2;
+}
+
+.talk-first-background {
+    background-color: #F13682;
+}
+
+.talk-second-background {
+    background-color: #9933cc;
+}
+
+.talk-container {
+    padding: 50px 0 0 23px;
+    height: 23em;
+}
+
+.keynote {
+    background-color: #f7f4fc;
+    padding: 15px 0 0 23px;
+}
+
+.keynote-title {
+    color: #9575ca;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.agenda-speakers {
+    display: block;
+    line-height: normal;
+    margin-top: 5px;
+}
+
+.speaker-information {
+    line-height: 18px;
+    margin-bottom: 7px;
+}
+
+.speaker-name {
+    font-weight: bold;
+}
+
+.speaker-picture {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 10px 10px 0;
+}
+
+.speaker-picture-container {
+    display: inline-flex;
+    margin-right: 30px;
+}
+
+.read-more-speaker {
+    width: 151px;
+    height: 40px;
+    border: solid 1px #9575ca;
+    background: none;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.talk-title {
+    font-weight: 600;
+    margin-right: 30px;
+}
+
+.talk-abstract {
+    bottom: 7%;
+    display: flex;
+    justify-content: space-between;
+    margin: 29px 30px 0 0;
+    position: absolute;
+}
+
+.no-border {
+    border: none;
+}
+
+.arrow {
+    color: #f13682;
+    font-size: 46px;
+    margin: 25px 20px;
+}
+
+.slick-arrow {
+    color: #f13682;
+    font-size: 46px;
+}
+
+a:focus, a:hover {
+    color: #9933cc;
+}
+
+@media (max-device-width: 992px) {
+    .arrow {
+        margin-top: 0;
+    }
+
+    .talk-container {
+        padding-top: 26px;
+    }
+
+    .keynote {
+        padding-top: 10px;
+    }
+
+    .item-container.talk {
+        width: 100%;
+    }
+}
+
+@media (max-device-width: 414px) {
+    .read-more-speaker {
+        width: 100%;
+    }
+
+    .item-container {
+        border: none;
+        margin-top: 19px;
+    }
+
+    .agenda {
+        padding: 20px 0 60px;
+    }
+
+    .talk-date-container {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .keynote-title {
+        font-size: 14px;
+    }
+
+    .item-container.talk {
+        width: 100%;
+    }
+}

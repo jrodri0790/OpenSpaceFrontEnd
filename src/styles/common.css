@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i,800');
+
+/* GENERALS */
+body{
+    margin: 0;
+    background: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-weight: 300;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.section-title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.section-container {
+    padding-left: 80px;
+    padding-right: 80px;
+    width: 100%;
+    margin: 0;
+    float: left;
+    position: relative;
+}
+
+.content-container {
+    max-width: 1440px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-box {
+    display: inline-block;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.align-middle {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+/* FONT SIZES */
+.font-size-large {
+  font-size: 36px;
+}
+
+.font-size-medium {
+  font-size: 20px;
+}
+
+.font-size-small {
+  font-size: 18px;
+}
+
+.large-title {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.medium-title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.font-size-extra-small {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.keynote-hour-purple {
+    color: #9013fe;
+}
+
+.small-title {
+    font-size: 18px;
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+/* COLORS */
+.pink {
+    color: #F13682 !important;
+}
+
+.black {
+    color: #000000;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.light-purple {
+    color: #9575ca;
+}
+
+.deep-purple {
+    color: #9933cc;
+}
+
+.purple {
+    color: #7c6d95;
+}
+
+.gray {
+    color: #4a4a4a;
+}
+
+.default-section {
+    font-weight: 800;
+    color: #7c6d95;
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+@media (max-device-width: 992px) {
+    .section-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .font-size-large {
+      font-size: 22px;
+    }
+
+    .font-size-medium {
+      font-size: 14px;
+    }
+
+    .font-size-small {
+      font-size: 10px;
+    }
+
+    .title-box {
+        margin-top: 30px;
+    }
+
+    .large-title {
+        font-size: 22px;
+    }
+
+    .medium-title {
+        font-size: 12px;
+    }
+}

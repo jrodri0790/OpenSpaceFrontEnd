@@ -1,0 +1,75 @@
+.horizontal-container {
+    width: 100%;
+    height: 23em;
+    margin: 42px 0 0;
+    overflow: hidden;
+}
+
+.scroll-horizontal {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.agenda-content {
+    transform: translate3d(0px, 0px, 0px);
+    display: inline-flex;
+    height: 100%;
+    position: absolute;
+    will-change: transform;
+}
+
+.agenda-carousel .slick-track {
+    height: 22em;
+}
+
+.agenda-carousel .item-container.talk {
+    width: 100%;
+}
+
+.agenda-carousel .item-container.informative {
+    width: 100%;
+}
+
+.agenda-carousel .talk-container {
+    height: 18em;
+}
+
+.agenda-carousel .talk-abstract {
+    bottom: 12%;
+}
+
+.agenda-carousel .talk-date-container {
+    padding-left: 23px;
+    text-align: left;
+}
+
+@media (max-device-width: 992px) {
+    .horizontal-container {
+        margin-top: 26px;
+    }
+
+    .agenda {
+        padding-bottom: 54px;
+    }
+}
+
+@media (max-device-width: 414px) {
+    .agenda-carousel .talk-container {
+        height: 25em;
+    }
+
+    .agenda-carousel .talk-abstract {
+        display: table;
+        bottom: 7%;
+    }
+
+    .read-more-speaker {
+        width: 205px;
+    }
+
+    .agenda-carousel .slick-track {
+        height: 100%;
+    }
+}

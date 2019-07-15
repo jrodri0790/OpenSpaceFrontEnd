@@ -1,0 +1,32 @@
+.pin-bubble .title {
+    top: -46px;
+    left: 25px;
+    min-width: 100px;
+    background-color: #fff;
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+    font-size: 1.5rem;
+    color: #5a1940;
+}
+
+.pin-logo {
+    min-height: 100px;
+    min-width: 101px;
+    display: inline;
+    padding: 16px 0 10px 30px;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+}
+
+.pin-logo .logo-icon {
+    width: 40px;
+    height: 40px;
+}

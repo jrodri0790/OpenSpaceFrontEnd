@@ -1,0 +1,38 @@
+.social-media-section {
+    background-color: #FFFFFF;
+    display: inline-block;
+    padding: 40px 0;
+}
+
+.social-media-logo {
+    font-size: 40px;
+    color: #7c6d95;
+    margin: 0 15px;
+}
+
+@media (max-device-width: 1439px) {
+    .invite-friends-section {
+        font-size: 24px;
+    }
+}
+
+@media (max-device-width: 992px) {
+    .social-media-logo {
+        font-size: 30px;
+    }
+
+    .social-media-section {
+        padding: 20px 0;
+    }
+}
+
+@media (max-device-width: 414px) {
+    .social-media-logo {
+        margin: 0;
+    }
+
+    .icons-section a {
+        width: 20%;
+        display: inline-block;
+    }
+}

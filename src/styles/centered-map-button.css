@@ -1,0 +1,21 @@
+.center-btn {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+    cursor: pointer;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.center-btn-icon {
+    color: rgb(25, 25, 25);
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 2px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

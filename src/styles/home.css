@@ -1,0 +1,104 @@
+.home {
+    padding: 80px;
+    display: inline-block;
+}
+
+.full-screen-bg, .full-screen-bg-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: 0;
+    background: url("../assets/hero.jpg");
+    background-size: cover;
+}
+
+.full-screen-bg-overlay {
+    background: rgba(124, 109, 149, 0.5);
+}
+
+.hero-glyphs {
+    background-image: url("../assets/hero-glyphs.png");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    background-blend-mode: soft-light;
+}
+
+.full-screen-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    right: 0;
+}
+
+.home-logo-box {
+    text-align: center;
+}
+
+.home-logo-box img {
+    height: 200px;
+}
+
+.advertising-container {
+    margin-top: 70px;
+}
+
+.home-box-advertising {
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.countdown-container {
+    margin-top: 50px;
+}
+
+.date-container {
+    margin-top: 40px;
+}
+
+.home-date-box {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+@media (max-device-width: 992px) {
+    .home {
+        padding: 30px;
+    }
+
+    .home-box-advertising {
+        font-size: 22px;
+    }
+
+    .advertising-container, .countdown-container, .date-container {
+        margin-top: 20px;
+    }
+
+    .date-container {
+        margin-bottom: 20px;
+    }
+
+    .home-date-box {
+        font-size: 12px;
+    }
+}
+
+@media (max-device-width: 568px) {
+    .home-logo-box img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-device-width: 480px) {
+    .full-screen-bg video {
+        width: 200%;
+    }
+}

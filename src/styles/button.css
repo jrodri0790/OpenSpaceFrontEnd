@@ -1,0 +1,23 @@
+.purchase-button {
+    background-color: #F13682;
+    color: #FFFFFF;
+    font-size: 26px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    font-weight: bold;
+    display: inline-block;
+    border: #F13682;
+}
+
+@media (max-device-width: 1024px) {
+    .purchase-button {
+        font-size: 17px;
+    }
+}
+
+
+@media (max-device-width: 992px) {
+    .purchase-button {
+        font-size: 12px;
+    }
+}

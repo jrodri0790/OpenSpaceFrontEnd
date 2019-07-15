@@ -1,0 +1,23 @@
+.spacer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+}
+
+.space-text {
+    color: #7C6D95;
+    color: #7C6D95;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.button-container {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.spacer-button {
+    padding-left: 20px;
+    padding-right: 20px;
+}

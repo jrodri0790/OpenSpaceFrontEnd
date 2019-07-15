@@ -1,0 +1,44 @@
+.talk-container.abstract {
+    height: 100%;
+    padding-left: 0;
+}
+
+.abstract-content {
+    font-size: 14px;
+}
+
+.abstract .talk-title {
+    font-size: 18px;
+    margin-bottom: 0.5em;
+}
+
+.talk-summary {
+    display: flex;
+    justify-content: space-between;
+    margin: 29px 30px 0 0;
+}
+
+.talk-summary .speaker-picture-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+@media (max-device-width: 414px) {
+    .talk-summary {
+        display: block;
+    }
+
+    .talk-summary .speaker-picture-container {
+        display: block;
+        text-align: center;
+        justify-content: center;
+        margin-bottom: 8%;
+        width: 100%;
+    }
+
+    .talk-summary .speaker-picture {
+        height: 80px;
+        width: 80px;
+    }
+}

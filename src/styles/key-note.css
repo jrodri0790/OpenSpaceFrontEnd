@@ -1,0 +1,43 @@
+.key-note {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background: url("../assets/keynote-bg.jpg") no-repeat #F3EEFF;
+    background-size: cover;
+}
+
+.key-note-picture img {
+    width: 100%;
+}
+
+.key-note-bio {
+    background-color: white;
+    padding: 35px;
+    margin-left: -20%;
+    margin-top: 80px;
+}
+
+.bio-title {
+    margin-bottom: 25px;
+}
+
+.bio-text {
+    line-height: 1.4;
+    color: #4A4A4A;
+    margin-bottom: 25px;
+}
+
+.read-more {
+    text-decoration: underline;
+}
+
+@media (max-device-width: 992px) {
+    .key-note-bio {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .key-note {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}

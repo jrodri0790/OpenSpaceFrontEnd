@@ -1,0 +1,82 @@
+.location {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: url('../assets/donde-bg.jpg');
+    background-size: cover;
+}
+
+/* INFORMATION BOX */
+.location-info {
+    background-color: white;
+    padding: 35px;
+    margin-right: -100px;
+    margin-top: 50px;
+    z-index: 1;
+}
+
+.location-title {
+    font-weight: bold;
+    margin-top: 15px;
+    font-style: italic;
+    color: #7c6d95;
+}
+
+.location-text {
+    color: #333333;
+    font-weight: 300;
+}
+
+.button-location-container {
+    margin-top: 50px;
+}
+
+.location-button {
+    padding: 15px;
+    width: 100%;
+}
+
+/* MAP BOX */
+.map-container {
+    height: 700px;
+}
+
+.center-btn-wrapper {
+    margin: 10px;
+    width: 28px;
+    height: 27px;
+}
+
+/* RESPONSIVE */
+@media (max-device-width: 992px) {
+    .location {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .location-info {
+        margin: 0;
+        padding: 15px;
+    }
+
+    .button-location-container {
+        margin-top: 20px;
+    }
+
+    .location-button {
+        padding: 10px;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+}
+
+@media (max-device-width: 320px) {
+    .location-button {
+        padding: 8px;
+    }
+}
+
+.gm-style-pbc {
+    display: none;
+}
