@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="section-container col-xs-12">
       <p>
-        &copy;&nbsp;<b>Thought</b>Works&nbsp;2018
+        &copy;&nbsp;<b>Thought</b>Works&nbsp;2019
       </p>
     </footer>
   )

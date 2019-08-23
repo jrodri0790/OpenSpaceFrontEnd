@@ -1,0 +1,129 @@
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 80px auto 40px auto;
+    background-color: gray;
+}
+
+.feedback-trapezoid {
+    position: relative;
+    width: 100%;
+}
+
+.feedback-center {
+    height: 100px;
+    background: #ef5ba1;
+    margin: 0 45px;
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 22px;
+}
+
+.feedback-left {
+    border-right: 45px solid #ef5ba1;
+    border-bottom: 100px solid transparent;
+    position: absolute;
+}
+.feedback-right {
+    border-left: 45px solid #ef5ba1;
+    border-bottom: 100px solid transparent;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.feedback-header-text {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-color: #ef5ba1;
+}
+
+.feedback-select {
+    margin: 20px 20px 0 20px;
+}
+
+.feedback-text {
+    margin: 20px;
+    padding: 10px;
+    outline: none;
+    background: darkgray;
+    color: white;
+    border: none;
+    font-size: 17px;
+}
+
+textarea.feedback-text::placeholder, div.feedback-select__placeholder {
+    font-style: italic;
+    color: white;
+    font-size: 20px;
+}
+
+.feedback-button {
+    padding: 20px 30px;
+    margin: 0 0 20px 0;
+    font-weight: normal;
+}
+
+.feedback-button:disabled {
+    background-color: gray;
+}
+
+div.feedback-select__control {
+    background-color: darkgray;
+    border: none;
+    border-radius: 0px;
+    height: 50px;
+    outline: none;
+    box-shadow: none;
+}
+
+div.feedback-select__control:hover {
+    background-color: darkgray;
+    border: none;
+    box-shadow: none;
+}
+
+div.feedback-select__placeholder {
+    color: white;
+}
+
+div.feedback-select__indicator {
+    color: white;
+}
+
+div.feedback-select__menu {
+
+}
+
+div.feedback-select__option:hover, div.feedback-select__option.selected {
+    background-color: #ef5ba1;
+}
+
+div.feedback-select__single-value {
+    color: white;
+    font-size: 1.5em;
+}
+
+div.feedback-select__option--is-focused, div.feedback-select__option--is-selected {
+    background-color: #9575ca;
+    color: white;
+}
+
+@media (max-device-width: 992px) {
+    .feedback-center {
+        padding: 33px;
+    }
+
+    .feedback-button {
+        font-size: 17px !important;
+    }
+}
+
+@media (max-device-width: 600px) {
+    .feedback-center {
+        padding: 22px;
+    }
+}

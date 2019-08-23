@@ -12,9 +12,8 @@ header.sticky {
     left: 0;
     right: 0;
     z-index: 100;
-    border-bottom: 1px solid #7d6d95;
-    background-color: #FFFFFF;
-    padding: 23px 80px;
+    background-color: #6a2569;
+    padding: 10px 80px;
 }
 
 .logo-icon-link {
@@ -48,14 +47,13 @@ header.sticky {
     padding: 0 18px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #000000;
+    color: white;
     border-bottom: 2px solid transparent;
-    font-weight: bold;
     text-align: center;
 }
 
 .nav a.active {
-    color: #DA3F7E;
+    font-weight: bold;
 }
 
 .header-purchase-button {
@@ -69,7 +67,7 @@ header.sticky {
 
 .menu-logo {
     font-size: 20px;
-    color: #7c6d95;
+    color: white;
     padding: 10px 20px;
 }
 

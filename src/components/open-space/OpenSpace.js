@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Header from '../Header'
 import SocialMedia from '../SocialMedia'
-import Collaborators from '../Collaborators'
 import OpenSpaceHeader from './OpenSpaceHeader'
 import OpenSpaceTalks from './OpenSpaceTalks'
 import VotingOpenSpaceButton from '../buttons/VotingOpenSpaceButton'
@@ -57,10 +56,14 @@ class OpenSpace extends Component {
     .catch((error) => {
       const typeNotification = 'error'
       this.setState({isVoting: false})
-      if (error.response.status === 401) {
-        this._showNotification('Lo siento, sólo puedes votar una vez.', typeNotification)
-      } else if (error.response.status === 403) {
-        this._showNotification('Lo siento, el código que ingresaste es incorrecto.', typeNotification)
+      if (error.response) {
+        if (error.response.status === 401) {
+          this._showNotification('Lo siento, sólo puedes votar una vez.', typeNotification)
+        } else if (error.response.status === 403) {
+          this._showNotification('Lo siento, el código que ingresaste es incorrecto.', typeNotification)
+        }
+      } else {
+        this._showNotification('Ha ocurrido un error, intentelo mas tarde.', typeNotification)
       }
     })
   }
@@ -103,7 +106,6 @@ class OpenSpace extends Component {
           </div>
         </div>
         <Header />
-        <Collaborators />
         <SocialMedia />
         <Footer />
       </div>

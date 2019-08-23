@@ -43,6 +43,15 @@ p {
     position: relative;
 }
 
+.section-container-big {
+    padding-left: 180px;
+    padding-right: 180px;
+    width: 100%;
+    margin: 0;
+    float: left;
+    position: relative;
+}
+
 .content-container {
     max-width: 1440px;
     display: block;
@@ -142,7 +151,7 @@ p {
 }
 
 @media (max-device-width: 992px) {
-    .section-container {
+    .section-container, .section-container-big {
         padding-left: 20px;
         padding-right: 20px;
     }

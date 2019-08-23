@@ -18,7 +18,7 @@ const XConfCountDown = () => {
   }
   return (
     <CountDown
-      date="2018-11-10T09:00:00-05:00"
+      date="2029-11-10T09:00:00-05:00"
       className="countdown"
       {...messages}
       onEnd={finish}
