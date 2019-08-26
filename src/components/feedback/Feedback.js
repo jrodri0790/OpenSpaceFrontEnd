@@ -11,16 +11,20 @@ import Select from 'react-select'
 class Feedback extends Component {
     constructor (props) {
         super(props)
-        this.state = {
-            chooseTalk: 0,
-            isProcessing: false,
-            selectedOption: null,
-            feedbackText: ""
-        }
+
         this.handleSelectionChange = this.handleSelectionChange.bind(this)
         this.handleTextChange = this.handleTextChange.bind(this)
         this.submitFeedback = this.submitFeedback.bind(this)
         this.getTalks = this.getTalks.bind(this)
+
+        this.state = {
+            chooseTalk: 0,
+            isProcessing: false,
+            selectedOption: null,
+            feedbackText: "",
+            talks: []
+        }
+        this.getTalks()
     }
 
     getTalks () {
@@ -28,16 +32,17 @@ class Feedback extends Component {
         axios.get(talksEndpointURI)
             .then((response) => {
                 if (response.status === 200) {
-                    return response.body.talks.forEach(talk =>  {
+                    response.data.forEach(talk =>  {
                         talk.value = talk.id
                         talk.label = talk.name
                     })
+                    this.setState({talks: response.data})
                 }
             })
             .catch(() => {
                 const typeNotification = 'error'
-                this._showNotification('Ha ocurrido un error, inténtelo más tarde.', typeNotification)
-                return null
+                this._showNotification('Oops ha ocurrido un error, inténtelo más tarde.', typeNotification)
+                this.setState({talks: []})
             })
     }
 
@@ -62,7 +67,7 @@ class Feedback extends Component {
                     this._showNotification('Lo siento, sólo puedes votar una vez.', typeNotification)
                 }
             } else {
-                this._showNotification('Ha ocurrido un error, inténtelo más tarde.', typeNotification)
+                this._showNotification('Oops ha ocurrido un error, inténtelo más tarde.', typeNotification)
             }
         })
     }
@@ -87,17 +92,16 @@ class Feedback extends Component {
     }
 
     handleSelectionChange (selectedOption) {
-        this.setState({ selectedOption });
+        this.setState({ selectedOption })
     }
 
     handleTextChange (event) {
-        this.setState({feedbackText: event.target.value});
+        this.setState({feedbackText: event.target.value})
     }
 
     render () {
-        const { selectedOption, feedbackText } = this.state
+        const { selectedOption, feedbackText, talks } = this.state
         const isSubmitButtonEnabled = this.state.selectedOption && this.state.feedbackText
-        const options = this.getTalks()
 
         return (
             <div>
@@ -108,7 +112,7 @@ class Feedback extends Component {
                             <div className="feedback-center font-size-large">Ayúdanos con tu Feedback</div>
                             <div className="feedback-right"></div>
                         </div>
-                        <Select value={selectedOption} onChange={this.handleSelectionChange} options={options}
+                        <Select value={selectedOption} onChange={this.handleSelectionChange} options={talks}
                             className="feedback-select" isSearchable placeholder="Busque la conferencia"
                             classNamePrefix="feedback-select"/>
                         <textarea className="feedback-text" placeholder="Escriba su feedback aqui" rows="20"
