@@ -7,6 +7,7 @@ import '../../styles/feedback.css'
 import axios from 'axios/index'
 import { withSnackbar } from 'notistack'
 import Select from 'react-select'
+import urls from '../../config'
 
 class Feedback extends Component {
     constructor (props) {
@@ -28,7 +29,7 @@ class Feedback extends Component {
     }
 
     getTalks () {
-        const talksEndpointURI = 'http://localhost:5000/open-space/talks'
+        const talksEndpointURI = urls.talksUrl
         axios.get(talksEndpointURI)
             .then((response) => {
                 if (response.status === 200) {
@@ -48,7 +49,7 @@ class Feedback extends Component {
 
     submitFeedback () {
         this.setState({isProcessing: true})
-        const voteEndpointURI = 'http://localhost:5000/open-space/feedback'
+        const voteEndpointURI = urls.feedbackUrl
         axios.post(voteEndpointURI, {
             "talk": this.state.selectedOption,
             "feedback": this.feedbackText

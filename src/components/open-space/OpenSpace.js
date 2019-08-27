@@ -9,6 +9,7 @@ import Footer from '../Footer'
 import '../../styles/open-space.css'
 import axios from 'axios/index'
 import { withSnackbar } from 'notistack'
+import urls from '../../config'
 
 class OpenSpace extends Component {
   constructor (props) {
@@ -42,7 +43,7 @@ class OpenSpace extends Component {
 
   submitVotingForm () {
     this.setState({isVoting: true})
-    const voteEndpointURI = 'https://xconf-open-space.herokuapp.com/open-space/vote'
+    const voteEndpointURI = urls.voteUrl
     axios.post(voteEndpointURI, {
       "code": this.state.assistantCode,
       "talks": this.getTalkCodesForBackend()

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import Checkbox from '@material-ui/core/Checkbox'
 import axios from 'axios/index'
+import urls from '../../config'
 
 class OpenSpaceTalks extends Component {
   constructor(props) {
@@ -19,7 +20,7 @@ class OpenSpaceTalks extends Component {
   }
 
   getTalks () {
-    const talksEndpointURI = 'http://localhost:5000/open-space/talks'
+    const talksEndpointURI = urls.talksUrl
     axios.get(talksEndpointURI)
     .then((response) => {
       if (response.status === 200) {
@@ -63,7 +64,7 @@ class OpenSpaceTalks extends Component {
             control={
               <Checkbox checked={this.state[this.buildTalkCheckedStateName(talk.id)]}
                         onChange={(event) => this.handleChange(event, this.buildTalkCheckedStateName(talk.id))}
-                        value={talk.id} />
+                        value={talk.id.toString()} />
             }
             label={talk.name}
           />
