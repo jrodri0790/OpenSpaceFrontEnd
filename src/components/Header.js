@@ -52,7 +52,7 @@ class Header extends React.Component {
             scroll={el => this.scroll(el)}>PREGUNTAS</NavHashLink>
         }
         {featureFlags.feedback &&
-          <NavHashLink to="/feedback">FEEDBACK</NavHashLink>
+          <NavHashLink to="/">FEEDBACK</NavHashLink>
         }
         {featureFlags.open_space &&
           <NavHashLink to="/openSpace">OPEN SPACE</NavHashLink>
