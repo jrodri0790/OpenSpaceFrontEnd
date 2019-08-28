@@ -35,7 +35,7 @@ class Feedback extends Component {
                 if (response.status === 200) {
                     response.data.forEach(talk =>  {
                         talk.value = talk.id
-                        talk.label = talk.name
+                        talk.label = talk.formatted_name
                     })
                     this.setState({talks: response.data})
                 }
@@ -51,13 +51,14 @@ class Feedback extends Component {
         this.setState({isProcessing: true})
         const voteEndpointURI = urls.feedbackUrl
         axios.post(voteEndpointURI, {
-            "talk": this.state.selectedOption,
-            "feedback": this.feedbackText
+            "talk_id": this.state.selectedOption.id,
+            "detail": this.state.feedbackText
         })
         .then((response) => {
             this.setState({isProcessing: false})
             if (response.status === 200) {
                 this._showNotification('Tu feedback fue registrado exitosamente.', 'success')
+                this.setState({ selectedOption: null, feedbackText: "" })
             }
         })
         .catch((error) => {
@@ -117,7 +118,7 @@ class Feedback extends Component {
                             className="feedback-select" isSearchable placeholder="Busque la conferencia"
                             classNamePrefix="feedback-select"/>
                         <textarea className="feedback-text" placeholder="Escriba su feedback aqui" rows="20"
-                            value={feedbackText} onChange={this.handleTextChange}></textarea>
+                            value={feedbackText} onChange={this.handleTextChange} maxlength="1000"></textarea>
                         <FeedbackSubmitButton center={true} class="feedback-button" submitForm={this.submitFeedback}
                             isButtonEnabled={isSubmitButtonEnabled} text="ENVIAR" />
                         {this.getOverlayLoading()}
