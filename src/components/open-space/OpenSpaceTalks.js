@@ -66,7 +66,7 @@ class OpenSpaceTalks extends Component {
                         onChange={(event) => this.handleChange(event, this.buildTalkCheckedStateName(talk.id))}
                         value={talk.id.toString()} />
             }
-            label={talk.name}
+            label={talk.formatted_name}
           />
         </div>
       )
