@@ -21,6 +21,7 @@
     "react-router-dom": "^4.3.1",
     "react-router-hash-link": "^1.2.0",
     "react-scroll-horizontal": "^1.5.1",
+    "react-select": "^3.0.4",
     "react-slick": "^0.23.1",
     "slick-carousel": "^1.8.1"
   },
