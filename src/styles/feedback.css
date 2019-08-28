@@ -80,6 +80,10 @@ div.feedback-select__control {
     box-shadow: none;
 }
 
+div.feedback-select__value-container div {
+    color: white;
+}
+
 div.feedback-select__control:hover {
     background-color: darkgray;
     border: none;
