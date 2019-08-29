@@ -6,8 +6,10 @@
   "author": "Thoughtworks Software Ecuador",
   "license": "ISC",
   "scripts": {
-    "start": "NODE_ENV=dev webpack-dev-server -d --config webpack-dev.config.js --hot",
-    "build": "rm -rf dist/ && webpack --config webpack-prod.config.js -p --bail"
+    "dev": "NODE_ENV=dev webpack-dev-server -d --config webpack-dev.config.js --hot",
+    "start": "NODE_ENV=production webpack-dev-server -d --config webpack-dev.config.js --hot",
+    "build": "rm -rf dist/ && webpack --config webpack-prod.config.js -p --bail",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@material-ui/core": "^3.3.1",
