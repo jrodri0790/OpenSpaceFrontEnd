@@ -5,7 +5,6 @@
   "main": "index.js",
   "author": "Thoughtworks Software Ecuador",
   "license": "ISC",
-  "heroku-postbuild": "rm -rf dist/ && webpack --config webpack-prod.config.js -p --bail",
   "scripts": {
     "start-dev": "NODE_ENV=dev webpack-dev-server -d --config webpack-dev.config.js --hot",
     "build": "rm -rf dist/ && webpack --config webpack-prod.config.js -p --bail",
