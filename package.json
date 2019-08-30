@@ -7,8 +7,9 @@
   "license": "ISC",
   "heroku-postbuild": "rm -rf dist/ && webpack --config webpack-prod.config.js -p --bail",
   "scripts": {
-    "start": "NODE_ENV=dev webpack-dev-server -d --config webpack-dev.config.js --hot",
-    "build": "rm -rf dist/ && webpack --config webpack-prod.config.js -p --bail"
+    "start-dev": "NODE_ENV=dev webpack-dev-server -d --config webpack-dev.config.js --hot",
+    "build": "rm -rf dist/ && webpack --config webpack-prod.config.js -p --bail",
+    "start": "node server.js"
   },
   "dependencies": {
     "@material-ui/core": "^3.3.1",
