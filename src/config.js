@@ -3,7 +3,7 @@ const config = {
         bff_url: 'http://localhost:5000/open-space/'
     },
     production: {
-        bff_url: 'https://xconf-open-space.herokuapp.com/open-space/'
+        bff_url: 'https://open-space-backend.herokuapp.com/open-space/'
     }
 }
 
