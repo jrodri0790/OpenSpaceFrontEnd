@@ -12,7 +12,7 @@ const AssistantCodeInput = ({setValidityOfAssistantCode}) => {
       <label htmlFor="participant-code">Código de Participante</label>
       <Input id="participant-code" placeholder="XCAAA-111" onChange={handleOnChange} />
       <div className="help">
-        El código puedes encontrarlo en la parte superior izquierda de tu entrada.
+        El código puedes encontrarlo en el interior de la agenda que se te entregó al ingresar al evento..
       </div>
     </div>
   )
